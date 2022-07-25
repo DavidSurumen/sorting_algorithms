@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <unistd.h>
 
 /**
  * bubble_sort - sorts an array of integers in ascending order
@@ -30,6 +29,5 @@ void bubble_sort(int *array, size_t size)
 			}
 		}
 	}
-	write(1, (void*)"\n", 1);
 }
 
