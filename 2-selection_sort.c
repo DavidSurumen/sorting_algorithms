@@ -6,9 +6,9 @@
 	B = t;\
 }
 /**
- * selection - takes an unsorted array of ints and sorts it
+ * selection_sort - takes an unsorted array of ints and sorts it
  *		by insertion
- * @arr: array
+ * @array: array
  * @size: array len
  *
  * Return: void
