@@ -5,7 +5,6 @@
  *		using bubble sort
  * @array: the unsorted array
  * @size: array size
- *
  * Return: void
  */
 void bubble_sort(int *array, size_t size)
@@ -30,4 +29,3 @@ void bubble_sort(int *array, size_t size)
 		}
 	}
 }
-
