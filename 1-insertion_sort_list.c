@@ -12,7 +12,9 @@
  */
 void swap(listint_t **list, listint_t **A, listint_t **B)
 {
-	if (!(*B)->next && !(*A)->prev)
+	if (!*list)
+		exit(1);
+	else if (!(*B)->next && !(*A)->prev)
 	{
 		(*B)->prev->next = NULL;
 		(*B)->prev = NULL;
