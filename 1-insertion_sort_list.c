@@ -63,8 +63,8 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *rev, *trav;
 
-	if (!*list)
-		exit(0);
+	if (!list || !(*list) || !((*list)->next))
+		return;
 
 	trav = (*list)->next;
 	while (trav)
