@@ -15,38 +15,29 @@ void swap(listint_t **list, listint_t **A, listint_t **B)
 	if (!(*B)->next && !(*A)->prev)
 	{
 		(*B)->prev->next = NULL;
-
 		(*B)->prev = NULL;
 
-		(*B)->next = *A;
 		(*A)->prev = *B;
-
+		(*B)->next = *A;
 		*list = (*list)->prev;
-		print_list(*list);
 	}
 	else if (!(*A)->prev)
 	{
 		(*B)->prev->next = (*B)->next;
 		(*B)->next->prev = (*B)->prev;
-
-		(*B)->next = *A;
-		(*A)->prev = *B;
-
 		(*B)->prev = NULL;
 
+		(*A)->prev = *B;
+		(*B)->next = *A;
 		*list = (*list)->prev;
-		print_list(*list);
 	}
 	else if (!(*B)->next)
 	{
 		(*B)->prev->next = NULL;
 		(*B)->prev = (*A)->prev;
 		(*A)->prev->next = *B;
-
-		(*B)->next = *A;
 		(*A)->prev = *B;
-
-		print_list(*list);
+		(*B)->next = *A;
 	}
 	else
 	{
@@ -54,12 +45,10 @@ void swap(listint_t **list, listint_t **A, listint_t **B)
 		(*B)->prev = (*A)->prev;
 		(*B)->next->prev = *A;
 		(*A)->next = (*B)->next;
-		
 		(*A)->prev = *B;
 		(*B)->next = *A;
-		
-		print_list(*list);
 	}
+	print_list(*list);
 
 }
 
