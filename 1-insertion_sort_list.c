@@ -21,8 +21,8 @@ void swap(listint_t **list, listint_t **A, listint_t **B)
 		(*B)->next = *A;
 		(*A)->prev = *B;
 
-		printf("swap 1\n");
 		*list = (*list)->prev;
+		print_list(*list);
 	}
 	else if (!(*A)->prev)
 	{
@@ -34,9 +34,8 @@ void swap(listint_t **list, listint_t **A, listint_t **B)
 
 		(*B)->prev = NULL;
 
-		printf("swap 2\n");
-
 		*list = (*list)->prev;
+		print_list(*list);
 	}
 	else if (!(*B)->next)
 	{
@@ -47,7 +46,7 @@ void swap(listint_t **list, listint_t **A, listint_t **B)
 		(*B)->next = *A;
 		(*A)->prev = *B;
 
-		printf("swap 3\n");
+		print_list(*list);
 	}
 	else
 	{
@@ -59,7 +58,7 @@ void swap(listint_t **list, listint_t **A, listint_t **B)
 		(*A)->prev = *B;
 		(*B)->next = *A;
 		
-		printf("swap 4\n");
+		print_list(*list);
 	}
 
 }
